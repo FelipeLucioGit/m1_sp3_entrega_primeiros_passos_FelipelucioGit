@@ -24,7 +24,7 @@ if (numero > numeroII) {
 
     alert(`o numero  ${numeroII} é maior que ${numero}`);
     if (numero = numeroII);
-        alert(`numeros iguais`);
+    alert(`numeros iguais`);
 }
 
 
@@ -105,14 +105,21 @@ else if (diaSemana > 7) {
 
 
 
-
-
-
 // Questão 6
 let salarioFuncionario = parseFloat(prompt("Digite aqui o seu salário"));
-let reajuste = 0.05 * salarioFuncionario + salarioFuncionario;
+let reajuste = parseFloat(prompt("Digite a porcentagem do reajuste"))
+let reajustePorcentagem = (reajuste / 100) * salarioFuncionario
+let reajusteConta = reajustePorcentagem + salarioFuncionario;
 
-alert(`O salário do funcionário corrigido é de : ${reajuste}`);
+
+if (reajuste <= 5) {
+    alert(`O salário do funcionário corrigido é de : ${reajusteConta}`);
+}
+else {
+    alert(`Valor invalido`)
+}
+
+
 
 
 
@@ -122,11 +129,14 @@ alert(`O salário do funcionário corrigido é de : ${reajuste}`);
 // Questão 7
 
 let dolar = parseFloat(prompt("digite o valor em dolar"));
-let cotacaoDolar = 5.40;
+let cotacaoDolar = parseFloat(prompt("digite a cotação atual"))
 
 let conversão = dolar * cotacaoDolar;
 
-alert(`$${dolar} é equivalente a R$${conversão} tendo 5,40 como cotação`);
+alert(`$${dolar} é equivalente a R$${conversão} tendo ${cotacaoDolar} como cotação`);
+
+
+
 
 
 
